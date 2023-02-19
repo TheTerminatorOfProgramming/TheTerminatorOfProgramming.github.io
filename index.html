@@ -1,219 +1,172 @@
 <!DOCTYPE html>
-<HTML lang="en">
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <meta name="description" content="Apex Music">
-    <meta name="color-scheme" content="dark">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Ollie landing page.">
+    <meta name="author" content="Devcrud">
+    <title>TheTerminatorOfPrograming</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.css">
 
-    <title>Home - Apex Music</title>
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/icons/styles.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- Bootstrap + Ollie main styles -->
+	<link rel="stylesheet" href="assets/css/ollie.css">
 
 </head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-<body>
-    <section class="menu navmenu">
+    <nav id="scrollspy" class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/imgs/brand.svg" alt="" class="brand-img"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-            <div class="container-fluid">
-                <div class="navbar-brand">
-                    <span class="navbar-logo">
-                        <a href="https://TheTerminatorOfProgramming.github.io">
-                            <img src="assets/images/retro.svg" alt="Logo" style="height: 3rem;background-color: white;">
-                        </a>
-                    </span>
-                    <span class="navbar-text"><a class="navbar-text text-white display-7"
-                            href="https://TheTerminatorOfProgramming.github.io">Apex Music</a></span>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Projects</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="header">
+        <div class="overlay"></div>
+
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">  
+            <div class="container">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">I Code in<br> C#</h1>
+                        </div>
                     </div>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                        <li class="nav-item"><a class="nav-link link text-white display-4"
-                                href="https://TheTerminatorOfProgramming.github.io">Home</a></li>
-                        <li class="nav-item"><a class="nav-link link text-white display-4"
-                                href="screenshots">Screenshots</a></li>
-                        <li class="nav-item"><a class="nav-link link text-white display-4"
-                                href="about">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link link text-white display-4"
-                                href="contact" aria-expanded="true">Contact Us</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link link text-white display-4" href="faq"
-                                aria-expanded="true">FAQ</a></li>
-                    </ul>
+                    <div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">I Code in <br> Java</h1>
+                          </div>
+                    </div>
+					<div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">I Code in <br> Kotlin</h1>
+                          </div>
+                    </div>
+					<div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">I Code in <br> VB.NET</h1>
+                          </div>
+                    </div>
+					<div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">I Code in <br> Python</h1>
+                          </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
 
-                    <div class="navbar-buttons section-btn"><a class="btn btn-primary display-4"
-                            href="https://play.google.com/store/apps/details?id=com.ttop.app.apex"><span
-                                class="icon-download icon-font"></span>
-                            Download</a></div>
+        <div class="infos container mb-4 mb-md-2">
+            <div class="socials text-right">
+                <div class="row justify-content-between">
+                    <div class="col">
+					    <a href = "mailto: ttop.app.dev@gmail.com" class="d-block subtitle"><i class="ti-email pr-2"></i> ttop.app.dev@gmail.com</a>
+                        <a href = "https://github.com/TheTerminatorOfProgramming" class="d-block subtitle"><i class="ti-github pr-2"></i> TheTerminatorOfProgramming</a>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </header>
+
+    <section class="section" id="portfolio">
+        <div class="container">
+            <h3 class="section-title pb-4"><br>Projects</br></h3>
+        </div>
+
+        <div id="owl-portfolio" class="owl-carousel owl-theme mt-4">
+            <a href="https://github.com/TheTerminatorOfProgramming/ApexMusic" class="item expertises-item">
+                <img src="assets/imgs/img-1.jpg"alt="Apex Music" class="box-shadow">
+                <h6 class="mt-3 mb-2">Apex Music</h6>
+                <p class="xs-font">An offline open source music player forked from Retro Music</p>
+            </a> 
+            <a href="javascript:void(0)" class="item expertises-item">
+                <img src="assets/imgs/img-2.jpg"alt="ADB Debloater" class="box-shadow">
+                <h6 class="mt-3 mb-2">ADB Debloater</h6>
+                <p class="xs-font">Android Debloater with a GUI, using ADB in the background.</p>
+            </a>            			
+        </div>
     </section>
-    <div class="animate">
-        <section class="homepage-main">
 
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-4 image-wrapper">
-                        <img class="w-100" src="assets/images/home_light.jpg" alt="banner">
-                    </div>
-                    <div class="col-12 col-md">
-                        <div class="text-wrapper text-center">
-                            <h1 class="text-white mb-3 display-1">
-                                <strong><span style="color:#1DE9B6;font-weight:bold">Apex</span> Music</strong><strong><br></strong></h1>
-                            <p class="display-7 text-white">
-                                The best Material design offline music player for Android.</p>
-                            <div class="section-btn mt-3"><a class="btn btn-primary display-7"
-                                    href="https://github.com/TheTerminatorOfProgramming/ApexMusic"><span
-                                        class="icon-font icon-github"></span>Source Code</a>
-                                <a class="btn btn-primary display-7"
-                                    href="https://play.google.com/store/apps/details?id=code.name.monkey.retromusic"><span
-                                        class="icon-font icon-google-play"></span>Download</a></div>
+    <section class="section" id="about">
+
+        <div class="container">
+
+            <div class="row align-items-center mr-auto">
+                <div class="col-md-4">
+                    <h3 class="section-title">About Us</h3>
+                    <p>I am a small programmer, working on small projects such as Apex Music and ADB Debloater</p>
+                </div>
+                    <div class="col-sm-6 col-lg-4" style="display: flex;">
+                    <div class="card-wrap">
+                        <div class="image-wrap">
+                            <img src="assets/imgs/icon.jpg" width="400" height="400">
+							<h5 class="section-title card-title align-center m-0 display-5">
+                                <strong>Jesse Collins</strong></h5>
+                           <h6 class="section-title card-title align-center m-0 display-5">
+                                Lead Developer &amp; Designer</h6>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="homepage-features">
+             </div>
+        </div>
+    </section>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-9">
-                        <h3 class="section-title align-center mb-0 display-2">
-                            <strong>Features</strong><br><strong><br></strong>
-                        </h3>
+    <section id="contact" class="section pb-0">
 
+        <div class="container">
+            <h3 class="section-title mb-5">Contact Us</h3>
+			    <p class="py-2">Contact us and i will get back to you as soon as we can.</p>
+				<p class="py-2"><i class="ti-email"></i>  ttop.app.dev@gmail.com</p>
+				<p class="py-2"><i class="ti-github"></i> https://github.com/TheTerminatorOfProgramming</p>
+
+            <footer class="footer mt-5 border-top">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-6 text-center text-md-left">
+                        <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a target="_blank" >TheTerminatorOfProgramming (TTOP)</a></p>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="card col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <div class="iconfont-wrapper">
-                                    <span class="icon-font icon-palette"></span>
-                                </div>
-                                <h5 class="card-title display-7"><strong>App Themes</strong></h5>
-                                <p class="text-white display-7">3 app themes which suits your
-                                    needs:<br>Clearly White, Kinda Dark &amp; Just Black</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <div class="iconfont-wrapper">
-                                    <span class="icon-font icon-palette-swatch"></span>
-                                </div>
-                                <h5 class="card-title display-7"><strong>Now Playing Themes</strong></h5>
-                                <p class="text-white display-7">More than 15 now playing themes to customize
-                                    the now playing screen to your liking.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <div class="iconfont-wrapper">
-                                    <span class="icon-font icon-compass"></span>
-                                </div>
-                                <h5 class="card-title display-7"><strong>Easy Navigation</strong></h5>
-                                <p class="text-white display-7">Self-explanatory interface without overloaded
-                                    menus and a fully customizable navigation bar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <div class="iconfont-wrapper">
-                                    <span class="icon-font icon-tag-text"></span>
-                                </div>
-                                <h5 class="card-title display-7"><strong>Tag Editor</strong></h5>
-                                <p class="text-white display-7">Built-in IDE3 tag editor to edit your song's
-                                    tags right in the app.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <div class="iconfont-wrapper">
-                                    <span class="icon-font icon-text-box"></span>
-                                </div>
-                                <h5 class="card-title display-7"><strong>Lyrics Support</strong></h5>
-                                <p class="text-white display-7">Supports both synced and classic lyrics so
-                                    you can sing on-the-go.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <div class="iconfont-wrapper">
-                                    <span class="icon-font icon-playlist-music"></span>
-                                </div>
-                                <h5 class="card-title display-7"><strong>Smart Playlists</strong></h5>
-                                <p class="text-white display-7">Automatically creates playlists based on
-                                    most played, recently added and most played songs.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <div class="iconfont-wrapper">
-                                    <span class="icon-font icon-translate"></span>
-                                </div>
-                                <h5 class="card-title display-7"><strong>Multiple Languages Support</strong></h5>
-                                <p class="text-white display-7">Supports 30+ languages and coutning.
-                                    You can translate the app to your own language by going to the GitHub repository.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <div class="iconfont-wrapper">
-                                    <span class="icon-font icon-plus-circle"></span>
-                                </div>
-                                <h5 class="card-title display-7"><strong>And Much More!</strong></h5>
-                                <p class="text-white display-7">This isn't all, there are a lot of more features which
-                                    can be found
-                                    <a
-                                        href="https://github.com/retroMusicPlayer/RetroMusicPlayer/#-included-features">here</a>.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+                </div> 
+            </footer>
+        </div>
+    </section>
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    
+    <!-- Owl carousel  -->
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.js"></script>
 
 
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/nav-dropdown.js"></script>
-    <script src="scripts/navbar-dropdown.js"></script>
+    <!-- Ollie js -->
+    <script src="assets/js/Ollie.js"></script>
+
 </body>
-
 </html>
