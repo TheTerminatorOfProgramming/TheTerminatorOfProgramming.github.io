@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Stacked - Free CSS Template</title>
+        <title>TheTerminatorOfProgramming</title>
 <!--
 Stacked Template
 http://www.templatemo.com/tm-505-stacked
@@ -22,6 +22,49 @@ http://www.templatemo.com/tm-505-stacked
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
+	<?php
+	$errors = [];
+	$errorMessage = '';
+	
+	if (!empty($_POST)) {
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$message = $_POST['message'];
+	
+	if (empty($name)) {
+	$errors[] = 'Name is empty';
+	}
+	
+	if (empty($email)) {
+	$errors[] = 'Email is empty';
+	} else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	$errors[] = 'Email is invalid';
+	}
+	
+	if (empty($message)) {
+	$errors[] = 'Message is empty';
+	}
+	
+	if (empty($errors)) {
+	$toEmail = 'example@example.com';
+	$emailSubject = 'New email from your contact form';
+	$headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
+	$bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+	$body = join(PHP_EOL, $bodyParagraphs);
+	
+	if (mail($toEmail, $emailSubject, $body, $headers)) 
+	header('Location: thank-you.html');
+	} else {
+	$errorMessage = 'Oops, something went wrong. Please try again later';
+	}
+	
+	} else {
+	$allErrors = join('<br/>', $errors);
+	$errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+	}
+}
+?>
+
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -54,14 +97,14 @@ http://www.templatemo.com/tm-505-stacked
                   <div class="col-md-8 col-md-offset-2">
                     <div class="home-content">
                       <div class="home-heading">
-                        <h1><em>TheTerminatorOfProgramming</em> (TTOP)</h1>
+                        <h1><em>TTOP</em> (TheTerminatorOfProgramming)</h1>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
                           <div class="home-box-content">
                             <div class="left-text">
-                              <h4>New <em>Stacked</em> Template</h4>
-                              <p>Stacked is brought to you by TemplateMo. Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam sit amet ante vehicula, aliquam mauris in, luctus neque.</p>
+                              <h4><em>A Little Bit About Me</em></h4>
+                              <p>I am a programmer, web designer and app developer from Australia. I started coding around 2012</p>
                               <div class="primary-button">
                                 <a href="#2">Discover More</a>
                               </div>
@@ -87,7 +130,7 @@ http://www.templatemo.com/tm-505-stacked
                   <div class="col-md-8 col-md-offset-2">
                     <div class="about-content">
                       <div class="heading">
-                        <h4>About us</h4>
+                        <h4>About me</h4>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
@@ -97,10 +140,11 @@ http://www.templatemo.com/tm-505-stacked
                         </div>
                         <div class="col-md-7 col-md-offset-5">
                           <div class="about-box-text">
-                            <h4>Curabitur varius sapien</h4>
-                            <p>Nulla vel accumsan dui. Aliquam tincidunt elit elit, nec iaculis neque interdum dictum. Donec venenatis quam enim, eu mattis arcu rhoncus id. Ut ac urna tellus.</p>
+                            <h4>More About Me</h4>
+                            <p>I am a programmer, web designer and app developer from Australia. I started coding around 2012. I am able to code in multiple coding languages including, C#, VB.NET, HTML5, CSS, Java, Kotlin and Python. I Have created multiple Projects
+							including Apex Music, ADB Deblaoter and many Others. Click Below to see my Recent Projects</p>
                             <div class="primary-button">
-                              <a href="#3">Discover More</a>
+                              <a href="#3">Recent Projects</a>
                             </div>
                           </div>
                         </div>
@@ -127,84 +171,33 @@ http://www.templatemo.com/tm-505-stacked
                           <div class="owl-carousel owl-theme projects-container">
                             <div>
                               <div class="project-item">
-                                <a href="img/project-item-01.jpg" data-lightbox="image-1"><img src="img/project-item-01.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Best Design</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
                                 <a href="img/project-item-02.jpg" data-lightbox="image-1"><img src="img/project-item-02.jpg" alt=""></a>
                                 <div class="text-content">
-                                  <h4>Creative Pen</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
+                                  <h4>Adb Debloater</h4>
+                                  <p>A Windows Tool designed to use ADB to debloat apps from Android Devices. By removing unnecessary and obscure system apps your device can get improved battery performance and privacy.</p>
+                                  <div style="margin-bottom: 16px" class="primary-button">
+                                    <a href="download/ADB_Debloater_Installer.exe">Download Installer</a>
+                                  </div>
+								  <div class="primary-button">
+                                    <a href="download/ADB_Debloater_Portable.zip">Download Portable</a>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div>
+							<div>
                               <div class="project-item">
-                                <a href="img/project-item-03.jpg" data-lightbox="image-1"><img src="img/project-item-03.jpg" alt=""></a>
+                                <a href="img/project-item-01.jpg" data-lightbox="image-1"><img src="img/project-item-01.jpg" alt=""></a>
                                 <div class="text-content">
-                                  <h4>Nice Capture</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
+                                  <h4>Apex Music</h4>
+                                  <p>An Android Open-Source Music Player Based off <a style="color:black; font-weight:bold" href="https://play.google.com/store/apps/details?id=code.name.monkey.retromusic" target="_blank">Retro Music</a>. Apex Music was originally started to create a tablet & foldable friendly version of Retro Music</p>
+                                  <div style="margin-bottom: 16px" class="primary-button">
+                                    <a href="download/Apex_Music_Stable_latest.apk">Download Latest Stable</a>
                                   </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-04.jpg" data-lightbox="image-1"><img src="img/project-item-04.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>This Moment</h4>
-                                  <p>Lorem ipsum dolor sit amet, adipis scing elit etiam sit amet ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
+								  <div style="margin-bottom: 16px" class="primary-button">
+                                    <a href="download/Apex_Music_Preview_latest.apk">Download Latest Preview</a>
                                   </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-05.jpg" data-lightbox="image-1"><img src="img/project-item-05.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Artwork</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-06.jpg" data-lightbox="image-1"><img src="img/project-item-06.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Item Sixth</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-07.jpg" data-lightbox="image-1"><img src="img/project-item-07.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Last Item</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
+								  <div class="primary-button">
+                                    <a href="download/Apex_Music_Beta_latest.apk">Download Latest Beta</a>
                                   </div>
                                 </div>
                               </div>
@@ -232,27 +225,73 @@ http://www.templatemo.com/tm-505-stacked
                       <div class="row">
                         <div class="col-md-8">
                           <div class="contat-form">
-                            <form id="contact" action="" method="post">
-                              <fieldset>
-                                <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
-                              </fieldset>
-                              <fieldset>
-                                <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
-                              </fieldset>
-                              <fieldset>
-                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
-                              </fieldset>
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="btn">Send Message</button>
-                              </fieldset>
-                            </form>
+<form  method="post" id="contact-form">
+   <h2>Contact us</h2>
+   <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+   <p>
+     <label>First Name:</label>
+     <input name="name" type="text"/>
+   </p>
+   <p>
+     <label>Email Address:</label>
+     <input style="cursor: pointer;" name="email" type="text"/>
+   </p>
+   <p>
+     <label>Message:</label>
+     <textarea name="message"></textarea>
+   </p>
+   <p>
+
+     <input type="submit" value="Send"/>
+   </p>
+ </form>
+
+ <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+ <script>
+
+
+     const constraints = {
+         name: {
+             presence: { allowEmpty: false }
+         },
+         email: {
+             presence: { allowEmpty: false },
+             email: true
+         },
+         message: {
+             presence: { allowEmpty: false }
+         }
+     };
+
+     const form = document.getElementById('contact-form');
+     form.addEventListener('submit', function (event) {
+
+         const formValues = {
+             name: form.elements.name.value,
+             email: form.elements.email.value,
+             message: form.elements.message.value
+         };
+
+
+         const errors = validate(formValues, constraints);
+         if (errors) {
+             event.preventDefault();
+             const errorMessage = Object
+                 .values(errors)
+                 .map(function (fieldValues) {
+                     return fieldValues.join(', ')
+                 })
+                 .join("\n");
+
+             alert(errorMessage);
+         }
+     }, false);
+ </script>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="more-info">
-                            <p>Lorem ipsum dolor , consectetur adipiscing elit. Nunc purus ligula, ullamcorper id velit id, vestibulum auc sapien. Sed quis mauris eget sem imperdiet rhoncus.<br><br>
-                            <em>3344 Etiam mauris erat,
-								<br>Vestibulum eu augue nec, 10550</em></p>
+                            <p>For any Enquires, please send an email and i will reply as soon as I can.<br><br></p>
                           </div>
                         </div>
                       </div>
@@ -260,7 +299,7 @@ http://www.templatemo.com/tm-505-stacked
                   </div>
                   <div class="col-md-12">
                     <div class="footer">
-                      <p>Copyright &copy; 2017 Your Company 
+                      <p>Copyright &copy; 2023 TheTerminatorOfProgramming
                       | Designed by TemplateMo</p>
                     </div>
                   </div>
